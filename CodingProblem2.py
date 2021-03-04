@@ -62,14 +62,24 @@ for i in range(len(copy) - 1):
     copy[i] = copy[i][:-1]
 
 
+file = open('parsedDates.txt', 'w')
+
 for i in copy:
     if i == "-1":
         break
+    else:
+        adddate = validate(i)
+        if adddate != "":
+            file.write(adddate + "\n")
+file.close()
 
-    newval = validate(i)
 
-    if newval != "":
-        print(newval)
+
+
+
+
+
+
 
 
 
