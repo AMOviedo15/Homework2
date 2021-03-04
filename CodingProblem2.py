@@ -1,5 +1,8 @@
 #Aaron Oviedo #1990958
 
+from datetime import date, datetime
+
+today = date.today()
 def validate(date):
     valtemp = 0
     newval = ""
@@ -59,4 +62,6 @@ while (userdate != "-1"):
         print(valDate)
     print()
     userdate = input()
+
+
 
