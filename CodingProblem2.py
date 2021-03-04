@@ -54,14 +54,22 @@ def validate(date):
 
 
 
-userdate = input()
+copy = []
+file = open('inputDates.txt', 'r')
+copy = file.readlines()
+file.close()
+for i in range(len(copy) - 1):
+    copy[i] = copy[i][:-1]
 
-while (userdate != "-1"):
-    valDate = validate(userdate)
-    if valDate != "":
-        print(valDate)
-    print()
-    userdate = input()
+
+for i in copy:
+    if i == "-1":
+        break
+
+    newval = validate(i)
+
+    if newval != "":
+        print(newval)
 
 
 
