@@ -5,11 +5,9 @@ def validate(date):
     newval = ""
 
     if date.find(",") != -1:
-        monthVal = date.split(',')
-        year = date.split(',')
+        monthVal, year = date.split(',')
         if monthVal.find(" ") != -1:
-            month = monthVal.split(" ")
-            day = monthVal.split(" ")
+            month, day = monthVal.split(" ")
             valtemp = 1
 
             day = day.strip()
